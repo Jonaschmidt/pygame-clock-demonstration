@@ -34,7 +34,7 @@ def handle_quit():
     return True
 
 
-# determine terminal position of the hour hand line from center of the screen from center screen
+# determine terminal position of the hour hand line from center of the screen
 #then, draw the line
 def drawHourHand(hour):
     hourHand_x = (SCREEN_WIDTH / 2) + (math.cos((hour * multHour) - (0.5 * math.pi)) * (SCREEN_WIDTH / 3))
@@ -43,7 +43,7 @@ def drawHourHand(hour):
     pygame.draw.line(screen, (0, 255, 0), centerScreen, (hourHand_x, hourHand_y), width=4)
 
 
-# determine terminal position of the minute hand line from center of the screen from center screen
+# determine terminal position of the minute hand line from center of the screen
 #then, draw the line
 def drawMinuteHand(minute):
     minHand_x = (SCREEN_WIDTH / 2) + (math.cos((minute * multMinSec) - (0.5 * math.pi)) * (SCREEN_WIDTH / 2))
@@ -52,7 +52,7 @@ def drawMinuteHand(minute):
     pygame.draw.line(screen, (0, 0, 255), centerScreen, (minHand_x, minHand_y), width=4)
 
 
-# determine terminal position of the second hand line from center of the screen from center screen
+# determine terminal position of the second hand line from center of the screen
 #then, draw the line
 def drawSecondHand(second):
     secHand_x = (SCREEN_WIDTH / 2) + (math.cos((second * multMinSec) - (0.5 * math.pi)) * (SCREEN_WIDTH / 2))
